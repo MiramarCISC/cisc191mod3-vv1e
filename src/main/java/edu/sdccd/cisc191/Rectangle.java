@@ -14,9 +14,9 @@ public class Rectangle extends Shape {
         super(name);
 
         if (width < 0.0) {
-            throw new IllegalArgumentException("A rectangle cannot have a negative width.");
+            throw new IllegalArgumentException("A Rectangle cannot have a negative width.");
         } else if (height < 0.0) {
-            throw new IllegalArgumentException("A rectangle cannot have a negative height.");
+            throw new IllegalArgumentException("A Rectangle cannot have a negative height.");
         }
 
         this.width = width;

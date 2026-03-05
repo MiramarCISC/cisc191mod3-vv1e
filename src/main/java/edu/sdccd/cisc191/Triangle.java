@@ -16,11 +16,11 @@ public class Triangle extends Shape {
         super(name);
 
         if (s1 < 0.0) {
-            throw new IllegalArgumentException("A triangle cannot have a negative side 1.");
+            throw new IllegalArgumentException("A Triangle cannot have a negative side 1.");
         } else if (s2 < 0.0) {
-            throw new IllegalArgumentException("A rectangle cannot have a negative side 2.");
+            throw new IllegalArgumentException("A Triangle cannot have a negative side 2.");
         } else if (s3 < 0.0) {
-            throw new IllegalArgumentException("A rectangle cannot have a negative side 3.");
+            throw new IllegalArgumentException("A Triangle cannot have a negative side 3.");
         }
 
         this.s1 = s1;

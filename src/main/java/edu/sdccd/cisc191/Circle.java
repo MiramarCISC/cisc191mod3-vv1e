@@ -12,7 +12,7 @@ public class Circle extends Shape {
         super(name);
 
         if (radius < 0.0) {
-            throw new IllegalArgumentException("A circle cannot have a negative radius.");
+            throw new IllegalArgumentException("A Circle cannot have a negative radius.");
         }
 
         this.radius = radius;

@@ -10,7 +10,7 @@ public class Main {
         shapes.add(new Rectangle("B",3,4));
         shapes.add(new Triangle("C",3,4,5));
 
-        for(Shape s:shapes){
+        for (Shape s : shapes) {
             System.out.println(s.describe() + " area=" + s.area());
         }
 
