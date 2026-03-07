@@ -54,8 +54,12 @@ abstract public class Shape implements Measurable,Comparable<Shape> {
 
     @Override
     public boolean equals(Object obj) {
-        return (obj instanceof Shape shape)
-            && shape.area() == this.area()
-            && shape.perimeter() == this.perimeter();
+        if (obj == this) return true; // Same instance
+
+        return (obj instanceof Shape shape) // Useful for checking specific properties later
+            && obj.getClass() == this.getClass() // If same shape
+            && shape.getName().equals(this.getName()) // ...with the same name
+            && shape.area() == this.area() // ...and area
+            && shape.perimeter() == this.perimeter(); // ...and perimeter
     }
 }
