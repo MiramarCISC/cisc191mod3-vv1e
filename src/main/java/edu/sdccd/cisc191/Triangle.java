@@ -15,12 +15,19 @@ public class Triangle extends Shape {
     public Triangle(String name, double s1, double s2, double s3) {
         super(name);
 
-        if (s1 < 0.0) {
-            throw new IllegalArgumentException("A Triangle cannot have a negative side 1.");
-        } else if (s2 < 0.0) {
-            throw new IllegalArgumentException("A Triangle cannot have a negative side 2.");
-        } else if (s3 < 0.0) {
-            throw new IllegalArgumentException("A Triangle cannot have a negative side 3.");
+        if (s1 <= 0.0) {
+            throw new IllegalArgumentException("A Triangle must have a positive side 1.");
+        } else if (s2 <= 0.0) {
+            throw new IllegalArgumentException("A Triangle must have a positive side 2.");
+        } else if (s3 <= 0.0) {
+            throw new IllegalArgumentException("A Triangle must have a positive side 3.");
+        }
+
+        if ((s1 >= s2 + s3) ||
+            (s2 >= s1 + s3) ||
+            (s3 >= s1 + s2)
+        ) {
+            throw new IllegalArgumentException("A Triangle's side cannot exceed the sum of the other two sides.");
         }
 
         this.s1 = s1;
